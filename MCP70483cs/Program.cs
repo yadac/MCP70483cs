@@ -50,7 +50,14 @@ namespace MCP70483cs
             //Console.ReadLine();
 
             // example 5
-            Example1_5.ThreadMethod();
+            //Example1_5.ThreadMethod();
+
+            // example 6
+            //Example1_6.ThreadMethod();
+
+            // example 7
+            Example1_7.ThreadMethod();
+
         }
     }
 }

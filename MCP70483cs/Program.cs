@@ -88,8 +88,10 @@ namespace MCP70483cs
             #endregion
 
             // example 17
-            Example1_17.ThreadMethod();
+            //Example1_17.ThreadMethod();
 
+            // example 18
+            Example1_18.DoProc();
         }
     }
 }

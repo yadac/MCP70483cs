@@ -47,6 +47,8 @@
     <Compile Include="Example1-12.cs" />
     <Compile Include="Example1-14.cs" />
     <Compile Include="Example1-15.cs" />
+    <Compile Include="Example1-16.cs" />
+    <Compile Include="Example1-17.cs" />
     <Compile Include="Example1-2.cs" />
     <Compile Include="Example1-3.cs" />
     <Compile Include="Example1-4.cs" />

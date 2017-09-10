@@ -64,8 +64,6 @@ namespace MCP70483cs
             // example 8
             //Example1_8.ThreadMethod();
 
-            #endregion
-
             // example 9
             //Example1_9.ThreadMethod();
 
@@ -79,10 +77,18 @@ namespace MCP70483cs
             //Example1_13.ThreadMethod();
 
             // example 14
-            Example1_14.ThreadMethod();
+            //Example1_14.ThreadMethod();
 
             // example 15
             //Example1_15.ThreadMethod();
+
+            // example 16
+            //Example1_16.ThreadMethod();
+
+            #endregion
+
+            // example 17
+            Example1_17.ThreadMethod();
 
         }
     }

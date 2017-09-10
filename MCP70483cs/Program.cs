@@ -70,7 +70,19 @@ namespace MCP70483cs
             //Example1_9.ThreadMethod();
 
             // example 11
-            Example1_11.ThreadMethod();
+            //Example1_11.ThreadMethod();
+
+            // example 12
+            //Example1_12.ThreadMethod();
+
+            // example 13
+            //Example1_13.ThreadMethod();
+
+            // example 14
+            Example1_14.ThreadMethod();
+
+            // example 15
+            //Example1_15.ThreadMethod();
 
         }
     }

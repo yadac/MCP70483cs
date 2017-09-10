@@ -17,6 +17,9 @@ namespace MCP70483cs
 
         public static void Main(string[] args)
         {
+            #region MyRegion
+
+
             // example 1
             //Thread t = new Thread(new ThreadStart(ThreadMethod));
             //t.Start();
@@ -56,7 +59,18 @@ namespace MCP70483cs
             //Example1_6.ThreadMethod();
 
             // example 7
-            Example1_7.ThreadMethod();
+            //Example1_7.ThreadMethod();
+
+            // example 8
+            //Example1_8.ThreadMethod();
+
+            #endregion
+
+            // example 9
+            //Example1_9.ThreadMethod();
+
+            // example 11
+            Example1_11.ThreadMethod();
 
         }
     }

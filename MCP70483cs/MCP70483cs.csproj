@@ -42,12 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Example1-11.cs" />
+    <Compile Include="Example1-12.cs" />
     <Compile Include="Example1-2.cs" />
     <Compile Include="Example1-3.cs" />
     <Compile Include="Example1-4.cs" />
     <Compile Include="Example1-5.cs" />
     <Compile Include="Example1-6.cs" />
     <Compile Include="Example1-7.cs" />
+    <Compile Include="Example1-8.cs" />
+    <Compile Include="Example1-9.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

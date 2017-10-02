@@ -16,7 +16,8 @@ namespace MCP70483cs
 
         public DelegateSample2()
         {
-            WorkPerformed += new EventHandler<WorkPerformedEventArgs>(WorkA);
+            WorkPerformed += new EventHandler<WorkPerformedEventArgs>(OnWorkPerformed);
+            WorkCompleted += new EventHandler(OnWorkCompleted);
         }
 
         public void DoProc()
@@ -26,22 +27,21 @@ namespace MCP70483cs
             DoWork(5, WorkType.GenerateReports);
         }
 
-        private void WorkA(object o, WorkPerformedEventArgs args)
+        private void OnWorkPerformed(object o, WorkPerformedEventArgs args)
         {
             Console.WriteLine($"worktype = {args.WorkType.ToString()}, work hours = {args.Hours}.");
         }
 
-        public void DoWork(int hours, WorkType workType) 
+        public void DoWork(int hours, WorkType workType)
         {
+            if (WorkCompleted == null || WorkPerformed == null) return;
+
             for (int i = 0; i < hours; i++)
             {
-                if (WorkPerformed != null)
-                {
-                    Thread.Sleep(1000);
-                    WorkPerformed(this, new WorkPerformedEventArgs(i + 1, workType));
-                }
+                Thread.Sleep(1000);
+                WorkPerformed(this, new WorkPerformedEventArgs(i + 1, workType));
             }
-            OnWorkCompleted(null, null);
+            WorkCompleted(this, null);
         }
 
         protected void OnWorkCompleted(object o, EventArgs e)

@@ -20,7 +20,7 @@ namespace MCP70483cs
             // example 18
             // Example1_18.DoProc();
 
-            TupleSample instance = new TupleSample();
+            DelegateSample2 instance = new DelegateSample2();
             instance.DoProc();
             Console.ReadLine();
         }

@@ -53,6 +53,8 @@
     <Compile Include="Example1-18.cs" />
     <Compile Include="Example1-19.cs" />
     <Compile Include="Example1-2.cs" />
+    <Compile Include="Example1-22.cs" />
+    <Compile Include="Example1-23.cs" />
     <Compile Include="Example1-3.cs" />
     <Compile Include="Example1-4.cs" />
     <Compile Include="Example1-5.cs" />

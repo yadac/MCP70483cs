@@ -17,17 +17,17 @@ namespace MCP70483wpf
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+            // example1-20
             HttpClient httpClient = new HttpClient();
             string content = await httpClient
                 .GetStringAsync("http://www.microsoft.com")
-                .ConfigureAwait(false);
+                .ConfigureAwait(true);
 
             // when configureAwait is "false", this code cause exception.
             this.label1.Content = content;
         }
 
         // you should also avoid returning void from an async method except when its an event handler.
-        // 
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
             HttpClient httpClient = new HttpClient();
@@ -36,12 +36,19 @@ namespace MCP70483wpf
                 .ConfigureAwait(false);
 
             using (FileStream sourceStream
-                = new FileStream("temp.html", FileMode.Create, FileAccess.Write, FileShare.None, 4096, useAsync: true))
+                = new FileStream("temp.html"
+                , FileMode.Create
+                , FileAccess.Write
+                , FileShare.None
+                , 4096
+                , useAsync: true))
             {
                 byte[] encodedText = Encoding.Unicode.GetBytes(content);
-                await sourceStream.WriteAsync(encodedText, 0, encodedText.Length)
+                await sourceStream.WriteAsync(
+                    encodedText
+                    , 0
+                    , encodedText.Length)
                     .ConfigureAwait(false);
-            }
         }
     }
 }

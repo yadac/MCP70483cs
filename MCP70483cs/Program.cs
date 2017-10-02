@@ -17,11 +17,7 @@ namespace MCP70483cs
 
         public static void Main(string[] args)
         {
-            // example 18
-            // Example1_18.DoProc();
-
-            DelegateSample2 instance = new DelegateSample2();
-            instance.DoProc();
+            Example1_23.DoProc();
             Console.ReadLine();
         }
     }

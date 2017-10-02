@@ -23,6 +23,9 @@ namespace MCP70483cs
             // 順番通りに取得、forallによって並列アクセスされるため出力順は保証されない
             Console.WriteLine("---------------");
 
+            // ParallelQuery.ForAll
+            // AsParallelで取得した戻り値の型がParallelQueryだから並列処理できる
+            // AsParallelで取得しないとIEnumerable型となるためForAllは使用できない
             parallelResult.ForAll(e => Console.WriteLine(e));
         }
     }

@@ -17,7 +17,7 @@ namespace MCP70483cs
 
         public static void Main(string[] args)
         {
-            Example1_28.DoProc();
+            Example1_30.DoProc();
             Console.ReadLine();
         }
     }

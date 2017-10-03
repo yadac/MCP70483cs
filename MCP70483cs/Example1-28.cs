@@ -14,10 +14,17 @@ namespace MCP70483cs
             BlockingCollection<string> col = new BlockingCollection<string>();
             Task read = Task.Run(() =>
             {
-                while (true)
+                //while (true)
+                //{
+                //    Console.WriteLine(col.Take());
+                //}
+
+                // コレクションから項目を取得し続ける
+                foreach (string s in col.GetConsumingEnumerable())
                 {
-                    Console.WriteLine(col.Take());
+                    Console.WriteLine(s);
                 }
+
             });
 
             Task write = Task.Run(() =>

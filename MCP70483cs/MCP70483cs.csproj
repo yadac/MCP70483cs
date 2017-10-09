@@ -73,6 +73,9 @@
     <Compile Include="Example1-41-ex.cs" />
     <Compile Include="Example1-41.cs" />
     <Compile Include="Example1-42.cs" />
+    <Compile Include="Example1-43.cs" />
+    <Compile Include="Example1-44.cs" />
+    <Compile Include="Example1-45.cs" />
     <Compile Include="Example1-5.cs" />
     <Compile Include="Example1-6.cs" />
     <Compile Include="Example1-7.cs" />

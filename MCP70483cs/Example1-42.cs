@@ -20,8 +20,8 @@ namespace MCP70483cs
             {
                 while (i < 5)
                 {
-                        // alternate is ThrowIfCancellationRequested()
-                        if (token.IsCancellationRequested)
+                    // alternate is ThrowIfCancellationRequested()
+                    if (token.IsCancellationRequested)
                     {
                         throw new OperationCanceledException(token);
                     }

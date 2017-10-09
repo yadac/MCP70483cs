@@ -82,6 +82,7 @@
     <Compile Include="Example1-6.cs" />
     <Compile Include="Example1-7.cs" />
     <Compile Include="Example1-75.cs" />
+    <Compile Include="Example1-77.cs" />
     <Compile Include="Example1-8.cs" />
     <Compile Include="Example1-9.cs" />
     <Compile Include="Program.cs" />

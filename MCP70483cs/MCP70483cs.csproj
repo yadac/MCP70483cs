@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DelegateSample2.cs" />
+    <Compile Include="Examle1-83.cs" />
     <Compile Include="Example1-11.cs" />
     <Compile Include="Example1-13.cs" />
     <Compile Include="Example1-12.cs" />
@@ -84,6 +85,11 @@
     <Compile Include="Example1-75.cs" />
     <Compile Include="Example1-77.cs" />
     <Compile Include="Example1-8.cs" />
+    <Compile Include="Example1-80.cs" />
+    <Compile Include="Example1-81.cs" />
+    <Compile Include="Example1-82.cs" />
+    <Compile Include="Example1-85.cs" />
+    <Compile Include="Example1-84.cs" />
     <Compile Include="Example1-9.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

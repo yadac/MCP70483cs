@@ -26,7 +26,13 @@ namespace MCP70483cs
             return null;
         }
 
-        public void DoProc()
+        public static void DoProc()
+        {
+            Example1_77 instance = new Example1_77();
+            instance.DoTest();
+        }
+
+        public void DoTest()
         {
             // both return class inherits from TextWriter
             // 共変性(covariance)
@@ -37,6 +43,8 @@ namespace MCP70483cs
             // 反返性(contravariance)
             contraDel = DoSomething;
 
+            Func<int, int, int> calc = (x, y) => x + y;
+            Console.WriteLine($"Func<int, int, int> calc = {calc(1, 2)}");
         }
     }
 }

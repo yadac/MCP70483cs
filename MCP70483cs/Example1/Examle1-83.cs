@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MCP70483cs
+namespace MCP70483cs.Example1
 {
     class Examle1_83
     {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +17,25 @@ namespace MCP70483cs
                 Console.WriteLine("from test 85");
             };
 
-            p.Raise();
+            p.OnChange += (sender, e) =>
+            {
+                throw new Exception();
+            };
+
+            p.OnChange += (sender, e) =>
+            {
+                Console.WriteLine("subscriber 3 called.");
+            };
+
+            try
+            {
+                p.Raise();
+            }
+            catch (AggregateException e)
+            {
+                Console.WriteLine($"e.InnerExceptions.Count = {e.InnerExceptions.Count}");
+            }
+            
         }
     }
 
@@ -60,6 +79,23 @@ namespace MCP70483cs
 
         public void Raise()
         {
+            var exceptions = new List<Exception>();
+
+            foreach (Delegate handler in onChange.GetInvocationList()){
+                try
+                {
+                    handler.DynamicInvoke(this, new MyArgs85(42));
+                }
+                catch (Exception ex)
+                {
+                    exceptions.Add(ex);
+                }
+            }
+            if (exceptions.Any())
+            {
+                throw new AggregateException(exceptions);
+            }
+
             onChange(this, new MyArgs85(42));
         }
     }

@@ -91,6 +91,8 @@
     <Compile Include="Example1-85.cs" />
     <Compile Include="Example1-84.cs" />
     <Compile Include="Example1-9.cs" />
+    <Compile Include="Example1\Example1-88.cs" />
+    <Compile Include="Example1\Example1-92.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TupleSample.cs" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using MCP70483cs.Example1;
 
 namespace MCP70483cs
 {
@@ -16,7 +17,7 @@ namespace MCP70483cs
 
         public static void Main(string[] args)
         {
-            Example1_85.DoProc();
+            Example1_92.DoProc();
             Console.ReadLine();
         }
     }

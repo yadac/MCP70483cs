@@ -15,6 +15,9 @@ namespace MCP70483cs.Example1
     [Serializable]
     public class OrderProcessException98 : Exception, ISerializable
     {
+        // use the Exception suffix in naming
+        // add the serializable attribute for accross application domain
+
         public int OrderId { get; private set; }
 
         public OrderProcessException98(int orderId)

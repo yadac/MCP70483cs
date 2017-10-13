@@ -10,7 +10,7 @@ namespace MCP70483cs.Example2
     {
         public static void DoProc()
         {
-            new Example2_7().MyMethod(1);
+            new Example2_7().MyMethod(1, third: true);
         }
 
         void MyMethod(int first, string second = "default value", bool third = false)

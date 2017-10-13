@@ -19,5 +19,15 @@ namespace MCP70483cs.Example2
             Console.WriteLine(second);
             Console.WriteLine(third);
         }
+        void MyMethod()
+        {
+        }
+
+        // this is not overload
+        //int MyMethod()
+        //{
+        //    return 10;
+        //}
+
     }
 }

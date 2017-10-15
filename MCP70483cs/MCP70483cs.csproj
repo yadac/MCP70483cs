@@ -98,6 +98,10 @@
     <Compile Include="Example1\Example1-96.cs" />
     <Compile Include="Example1\Example1-97.cs" />
     <Compile Include="Example1\Example1-98.cs" />
+    <Compile Include="Example2\Example2-10.cs" />
+    <Compile Include="Example2\Example2-12.cs" />
+    <Compile Include="Example2\Example2-13.cs" />
+    <Compile Include="Example2\Example2-14.cs" />
     <Compile Include="Example2\Example2-2.cs" />
     <Compile Include="Example2\Example2-7.cs" />
     <Compile Include="Program.cs" />

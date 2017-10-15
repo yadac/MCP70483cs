@@ -98,7 +98,17 @@
     <Compile Include="Example1\Example1-96.cs" />
     <Compile Include="Example1\Example1-97.cs" />
     <Compile Include="Example1\Example1-98.cs" />
+    <Compile Include="Example2-29.cs" />
+    <Compile Include="Example2\Example2-10.cs" />
+    <Compile Include="Example2\Example2-12.cs" />
+    <Compile Include="Example2\Example2-13.cs" />
+    <Compile Include="Example2\Example2-14.cs" />
+    <Compile Include="Example2\Example2-16.cs" />
+    <Compile Include="Example2\Example2-17.cs" />
     <Compile Include="Example2\Example2-2.cs" />
+    <Compile Include="Example2\Example2-24.cs" />
+    <Compile Include="Example2\Example2-27.cs" />
+    <Compile Include="Example2\Example2-28.cs" />
     <Compile Include="Example2\Example2-7.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,6 +119,35 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

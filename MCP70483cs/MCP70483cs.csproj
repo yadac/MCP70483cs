@@ -102,6 +102,8 @@
     <Compile Include="Example2\Example2-12.cs" />
     <Compile Include="Example2\Example2-13.cs" />
     <Compile Include="Example2\Example2-14.cs" />
+    <Compile Include="Example2\Example2-16.cs" />
+    <Compile Include="Example2\Example2-17.cs" />
     <Compile Include="Example2\Example2-2.cs" />
     <Compile Include="Example2\Example2-7.cs" />
     <Compile Include="Program.cs" />

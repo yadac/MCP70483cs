@@ -112,6 +112,7 @@
     <Compile Include="Example2\Example2-34.cs" />
     <Compile Include="Example2\Example2-40.cs" />
     <Compile Include="Example2\Example2-41.cs" />
+    <Compile Include="Example2\Example2-43.cs" />
     <Compile Include="Example2\Example2-7.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -21,8 +21,13 @@ namespace MCP70483cs.Example2
                     , typeof(Console).GetMethod("WriteLine", new Type[] { typeof(String) })
                     , Expression.Constant("World")));
             Expression.Lambda<Action>(block).Compile()();
+        }
 
-
+        public static void DoProc2()
+        {
+            // define expression -> compile -> execute
+            Expression<Func<int, bool>> expr = num => num < 5;
+            Console.WriteLine(expr.Compile()(4));
         }
     }
 }

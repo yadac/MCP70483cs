@@ -14,7 +14,7 @@ namespace MCP70483cs.Example2
             new Example2_58().MyMthod();
 
             ConditionalAttribute c = (ConditionalAttribute)Attribute.GetCustomAttribute(typeof(Person258), typeof(ConditionalAttribute));
-            Console.WriteLine($"c.ConditionString = {c.ConditionString}");
+            Console.WriteLine($"c.ConditionString = {c?.ConditionString}");
         }
 
         // multi attributes

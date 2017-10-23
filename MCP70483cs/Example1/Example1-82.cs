@@ -9,7 +9,8 @@ namespace MCP70483cs
 {
     class Example1_82
     {
-
+        private int _i = 0;
+        private double _d = 0d;
         public Action OnChange { get; set; }
 
         public void ClickButton()

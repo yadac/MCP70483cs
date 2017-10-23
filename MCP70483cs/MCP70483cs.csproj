@@ -134,6 +134,7 @@
     <Compile Include="Example2\Example2-7.cs" />
     <Compile Include="Example2\Example2-63.cs" />
     <Compile Include="Example2\Example2-71.cs" />
+    <Compile Include="Example2\Example2-72.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TupleSample.cs" />

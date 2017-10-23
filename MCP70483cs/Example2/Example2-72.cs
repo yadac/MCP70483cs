@@ -34,5 +34,13 @@ namespace MCP70483cs.Example2
                 }
             }
         }
+
+        static void ExecuteMethod272()
+        {
+            int i = 42;
+            MethodInfo compareToMethod
+                = i.GetType().GetMethod("CompareTo", new Type[] { typeof(int) });
+            int result = (int)compareToMethod.Invoke(i, new object[] { 41 });
+        }
     }
 }

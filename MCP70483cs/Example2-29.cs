@@ -13,7 +13,7 @@ namespace MCP70483cs
         public static void DoProc()
         {
             dynamic obj = new Example2_29();
-            Console.WriteLine(obj.SomeProperty);
+            // Console.WriteLine(obj.SomeProperty);
         }
 
         public override bool TryGetMember(GetMemberBinder binder, out object result)

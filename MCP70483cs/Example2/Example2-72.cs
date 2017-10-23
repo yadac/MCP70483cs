@@ -28,8 +28,8 @@ namespace MCP70483cs.Example2
                     // is keyword is judgement.
                     Console.WriteLine($"field.FieldType = {field.FieldType}");
                     Console.WriteLine($"typeof(int) = {typeof(int)}");
-                    Console.WriteLine(field.FieldType is Int32);
-                    Console.WriteLine(field.FieldType is Type);
+                    Console.WriteLine($"field.FieldType is Int32 = {field.FieldType is Int32}");
+                    Console.WriteLine($"field.FieldType is Type = {field.FieldType is Type}");
                     Console.WriteLine(field.GetValue(obj));
                 }
             }

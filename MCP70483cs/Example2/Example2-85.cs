@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MCP70483cs.Example2
 {
-    class Example2_85
+    class Example2_85 : IDisposable
     {
         private static WeakReference data;
 
@@ -15,7 +15,7 @@ namespace MCP70483cs.Example2
             object resutlt = GetData();
             // uncommenting this line will make data.Target null
             // GC.Collect();
-
+            GC.Collect();
             // if Gc execute, GetData again.
             // if Gc not execute, return value from weakreference.
             // weakreference will not be a target of Gc.
@@ -37,6 +37,11 @@ namespace MCP70483cs.Example2
         }
 
         private static object LoadLargeList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Dispose()
         {
             throw new NotImplementedException();
         }

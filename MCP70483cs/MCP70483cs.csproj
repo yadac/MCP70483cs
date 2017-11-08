@@ -151,6 +151,9 @@
     <Compile Include="Example2\Example2-85.cs" />
     <Compile Include="Example3\Customer31.cs" />
     <Compile Include="Example3\Example3-17.cs" />
+    <Compile Include="Example3\Example3-19.cs" />
+    <Compile Include="Example3\Example3-21.cs" />
+    <Compile Include="Example3\Example3-22.cs" />
     <Compile Include="Example3\Example3-4.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -29,6 +29,7 @@ namespace MCP70483cs.Example3
 
         private int GetBucket(int hashcode)
         {
+            // GetHashCode always return positive.
 
             // UInt32 0 to 4,294,967,295.
             // Int32  -2,147,483,648 to 2,147,483,647

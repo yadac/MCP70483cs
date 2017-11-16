@@ -157,6 +157,7 @@
     <Compile Include="Example3\Example3-21.cs" />
     <Compile Include="Example3\Example3-22.cs" />
     <Compile Include="Example3\Example3-23.cs" />
+    <Compile Include="Example3\Example3-24.cs" />
     <Compile Include="Example3\Example3-4.cs" />
     <Compile Include="Example3\ZipReader.cs" />
     <Compile Include="Program.cs" />

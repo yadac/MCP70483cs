@@ -19,7 +19,7 @@ namespace MCP70483cs
 
         public static void Main(string[] args)
         {
-            ZipReader.DoProc();
+            Example3_27.DoProc();
             Console.ReadLine();
         }
     }

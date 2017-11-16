@@ -19,7 +19,7 @@ namespace MCP70483cs.Example3
                 using (ZipArchive zip = new ZipArchive(zipToOpen, ZipArchiveMode.Read))
                 {
                     Console.WriteLine("information about this package");
-                    Console.WriteLine("------------------------------s");
+                    Console.WriteLine("------------------------------");
                     foreach (var entry in zip.Entries)
                     {
                         Console.Write(entry.FullName);

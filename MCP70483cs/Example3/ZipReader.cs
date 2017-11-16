@@ -16,6 +16,8 @@ namespace MCP70483cs.Example3
         {
             try
             {
+                WriteFile();
+
                 string zipFile = @"C:\Temp\software\installer\DocAve_v5_Manager.zip";
                 Console.WriteLine(zipFile);
                 using (FileStream zipToOpen = new FileStream(zipFile, FileMode.Open))
@@ -40,6 +42,20 @@ namespace MCP70483cs.Example3
             {
                 Console.WriteLine(e);
                 // throw;
+            }
+        }
+
+        [FileIOPermission(SecurityAction.Demand, AllFiles = FileIOPermissionAccess.Read)]
+        private static void WriteFile()
+        {
+            string file = @"C:\Temp\test.txt";
+            using (FileStream fs = new FileStream(file, FileMode.OpenOrCreate))
+            {
+                using (StreamWriter sw = new StreamWriter(fs, Encoding.UTF8))
+                {
+                    sw.Write("hello");
+                    sw.Flush();
+                }
             }
         }
     }

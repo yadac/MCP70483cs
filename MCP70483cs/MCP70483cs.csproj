@@ -44,6 +44,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll</HintPath>
     </Reference>
@@ -165,6 +166,8 @@
     <Compile Include="Example3\Example3-33.cs" />
     <Compile Include="Example3\Example3-34.cs" />
     <Compile Include="Example3\Example3-4.cs" />
+    <Compile Include="Example3\Example3-41.cs" />
+    <Compile Include="Example3\Example3-42.cs" />
     <Compile Include="Example3\ZipReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

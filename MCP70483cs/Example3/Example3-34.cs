@@ -1,4 +1,6 @@
-﻿using System;
+﻿#define MySymbol
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +13,11 @@ namespace MCP70483cs.Example3
 
         public static void DoProc()
         {
+
+#if MySymbol
+            Console.WriteLine("custom symbole is defined.");
+#endif
+
 #if DEBUG
             Console.WriteLine("Debug mode");        
 #else

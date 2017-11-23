@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Threading;
-using MCP70483cs.Example1;
-using MCP70483cs.Example2;
-using MCP70483cs.Example3;
-using MCP70483cs.C7;
 
 namespace MCP70483cs
 {
@@ -11,8 +7,7 @@ namespace MCP70483cs
     {
         public static void Main(string[] args)
         {
-            SampleOut.DoProc();
-            Console.ReadLine();
+            Console.WriteLine("hello world!!");
         }
     }
 }

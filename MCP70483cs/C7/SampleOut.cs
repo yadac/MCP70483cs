@@ -11,8 +11,8 @@ namespace MCP70483cs.C7
         public static void DoProc()
         {
             var runner = new Runner();
-            runner.Run();
-            runner.Run2();
+            runner.PrintSum(10);
+            runner.PrintSum2("1d");
         }
     }
 
@@ -30,6 +30,27 @@ namespace MCP70483cs.C7
         {
             GetTime(out int hour, out int minutes, out int seconds);
             Console.WriteLine($"{hour}:{minutes}:{seconds}");
+        }
+
+        public void PrintSum(object o)
+        {
+            if (o is null) return; // constant pattern
+            if (!(o is int i)) return; // type pattern(int)
+            int sum = 0;
+            for (int j = 0; j <= i; j++)
+                sum += j;
+            Console.WriteLine($"(printsum)The sum of 1 to {i} is {sum}");
+        }
+
+        public void PrintSum2(object o)
+        {
+            if (o is int i || o is string s && int.TryParse(s, out i))
+            {
+                int sum = 0;
+                for (int j = 0; j <= i; j++)
+                    sum += j;
+                Console.WriteLine($"(printsum2)The sum of 1 to {i} is {sum}");
+            }
         }
 
         private void GetTime(out int hour, out int minutes, out int seconds)

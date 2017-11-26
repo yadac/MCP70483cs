@@ -176,6 +176,7 @@
     <Compile Include="Example3\Example3-49.cs" />
     <Compile Include="Example3\Example3-50.cs" />
     <Compile Include="Example3\Example3-51.cs" />
+    <Compile Include="Example3\Example3-52.cs" />
     <Compile Include="Example3\ZipReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

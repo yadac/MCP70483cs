@@ -19,7 +19,7 @@ namespace MCP70483cs.Example3
                 Console.ReadKey();
                 return;
             }
-            // can't show "myNewLog" in event viewer. 
+            // show "myNewLog" in event viewer. 
             EventLog myLog = new EventLog();
             myLog.Source = "mySource";
             myLog.WriteEntry("Log Event!");

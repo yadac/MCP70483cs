@@ -9,7 +9,7 @@ namespace MCP70483cs.Example3
 {
     class Example3_52
     {
-        const int numberOfIterations = 100000;
+        const int numberOfIterations = 1000000;
         public static void DoProc()
         {
             Stopwatch sw = new Stopwatch();

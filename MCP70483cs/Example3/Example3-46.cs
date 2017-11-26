@@ -19,11 +19,16 @@ namespace MCP70483cs.Example3
 
             traceSource.TraceInformation("Tracing application..");
 
+            // args meaning
+            // 1.. type
+            // 2.. event id number
+            // 3.. traced information
             traceSource.TraceEvent(
                 TraceEventType.Critical
                 , 0
                 , "Critical trace");
 
+            // you can pass extra arguments that should be output to the trace.
             traceSource.TraceData(
                 TraceEventType.Information
                 , 1

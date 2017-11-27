@@ -14,7 +14,8 @@ namespace MCP70483cs
         {
             Example4_2.DoProc();
             // commented, instead of Ctrl + F5
-            // Console.ReadLine(); 
+            // Console.ReadLine();
+            //
         }
     }
 }

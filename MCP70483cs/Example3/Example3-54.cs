@@ -32,6 +32,9 @@ namespace MCP70483cs.Example3
                 , false);
             totalOperationsSeCounter.Increment();
             operationsPerSecond.Increment();
+
+            // delete counter
+            PerformanceCounterCategory.Delete("MyCategory");
         }
 
         private static bool CreatePerformanceCounters()

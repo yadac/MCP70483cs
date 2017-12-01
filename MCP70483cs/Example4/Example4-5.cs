@@ -14,7 +14,7 @@ namespace MCP70483cs.Example4
             // list the subdirectories for program files containing the character 'a' 
             // with a maximum depth of 5
             DirectoryInfo directoryInfo = new DirectoryInfo(@"c:\program files");
-            ListDirectories(directoryInfo, "*a*", 5, 0);
+            ListDirectories(directoryInfo, "*a*", 5, 1);
         }
 
         private static void ListDirectories(DirectoryInfo directoryInfo

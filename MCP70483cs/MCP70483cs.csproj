@@ -182,6 +182,7 @@
     <Compile Include="Example3\ZipReader.cs" />
     <Compile Include="Example4\Example4-1.cs" />
     <Compile Include="Example4\Example4-2.cs" />
+    <Compile Include="Example4\Example4-5.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TupleSample.cs" />

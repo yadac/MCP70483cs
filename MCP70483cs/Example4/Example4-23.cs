@@ -12,9 +12,15 @@ namespace MCP70483cs.Example4
     {
 
 
+        // Asyncがついているので非同期メソッド
+        // 非同期メソッドではAwaitキーワードが使えるようになる
+        // Awaitは同期処理結果待ちと同じ
+        // 非同期メソッドをRunで開始、開始したら結果の返却を待たずに後続処理を続ける
+        // Awaitの処理が終わったら非同期処理は結果をTaskに詰めて元スレッドに返却する
         public async Task CreateAndWriteAsyncToFile()
         {
-            Console.WriteLine("CreateAndWriteAsyncToFile");
+            Console.Write("CreateAndWriteAsyncToFile:");
+            Console.WriteLine(System.Threading.Thread.CurrentThread.ManagedThreadId);
             using (FileStream fs = new FileStream(
                 @"c:\temp\csharp\test.dat", FileMode.Create, FileAccess.Write, FileShare.None, 4096, true))
             {
@@ -25,12 +31,32 @@ namespace MCP70483cs.Example4
             }
         }
 
+        public void Test423() {
+            Console.Write("test423:");
+            Console.WriteLine(System.Threading.Thread.CurrentThread.ManagedThreadId);
+        }
+
         public static void DoProc()
         {
-            var instance = new Example4_23();
-            Task task = instance.CreateAndWriteAsyncToFile();
+            Console.Write("Main:");
+            Console.WriteLine(System.Threading.Thread.CurrentThread.ManagedThreadId);
+            var tasks = new List<Task>
+            {
+                Task.Run(() => new Example4_23().Test423()),
+                Task.Run(() =>
+                {
+                    var instance = new Example4_23();
+                    instance.CreateAndWriteAsyncToFile();
+                })
+            };
             Console.WriteLine("after calling task");
-            task.Wait();
+            Task.WaitAll(tasks.ToArray());
+
+            foreach (var task in tasks)
+            {
+                Console.Write(task.Id);
+                Console.WriteLine(task.Status);
+            }
         }
     }
 }

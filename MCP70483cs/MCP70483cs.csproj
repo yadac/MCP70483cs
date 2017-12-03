@@ -190,6 +190,7 @@
     <Compile Include="Example3\ZipReader.cs" />
     <Compile Include="Example4\Example4-1.cs" />
     <Compile Include="Example4\Example4-12.cs" />
+    <Compile Include="Example4\Example4-14.cs" />
     <Compile Include="Example4\Example4-2.cs" />
     <Compile Include="Example4\Example4-5.cs" />
     <Compile Include="Example4\Example4-6.cs" />

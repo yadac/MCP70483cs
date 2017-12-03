@@ -194,6 +194,8 @@
     <Compile Include="Example4\Example4-18.cs" />
     <Compile Include="Example4\Example4-19.cs" />
     <Compile Include="Example4\Example4-2.cs" />
+    <Compile Include="Example4\Example4-20.cs" />
+    <Compile Include="Example4\Example4-22.cs" />
     <Compile Include="Example4\Example4-5.cs" />
     <Compile Include="Example4\Example4-6.cs" />
     <Compile Include="Example4\Example4-8.cs" />

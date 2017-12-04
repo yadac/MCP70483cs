@@ -58,6 +58,10 @@
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
@@ -198,6 +202,7 @@
     <Compile Include="Example4\Example4-22.cs" />
     <Compile Include="Example4\Example4-23.cs" />
     <Compile Include="Example4\Example4-26.cs" />
+    <Compile Include="Example4\Example4-28.cs" />
     <Compile Include="Example4\Example4-5.cs" />
     <Compile Include="Example4\Example4-6.cs" />
     <Compile Include="Example4\Example4-8.cs" />
@@ -255,4 +260,11 @@
     <Error Condition="!Exists('..\packages\xunit.core.2.3.1-rc2-build3844\build\xunit.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.3.1-rc2-build3844\build\xunit.core.targets'))" />
   </Target>
   <Import Project="..\packages\xunit.core.2.3.1-rc2-build3844\build\xunit.core.targets" Condition="Exists('..\packages\xunit.core.2.3.1-rc2-build3844\build\xunit.core.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

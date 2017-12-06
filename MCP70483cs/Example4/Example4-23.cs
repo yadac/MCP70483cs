@@ -42,7 +42,10 @@ namespace MCP70483cs.Example4
             Console.WriteLine(System.Threading.Thread.CurrentThread.ManagedThreadId);
             var tasks = new List<Task>
             {
+                // async calling.
                 Task.Run(() => new Example4_23().Test423()),
+
+                // call async method.
                 Task.Run(() =>
                 {
                     var instance = new Example4_23();

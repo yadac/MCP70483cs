@@ -12,10 +12,7 @@ namespace MCP70483cs
     {
         public static void Main(string[] args)
         {
-            Example4_37.DoProc();
-            // commented, instead of Ctrl + F5
-            // Console.ReadLine();
-            //
+            Example4_40.DoProc();
         }
     }
 }

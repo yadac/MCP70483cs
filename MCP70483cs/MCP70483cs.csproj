@@ -219,6 +219,7 @@
     <Compile Include="Example4\Example4-39.cs" />
     <Compile Include="Example4\Example4-40.cs" />
     <Compile Include="Example4\Example4-43.cs" />
+    <Compile Include="Example4\Example4-45.cs" />
     <Compile Include="Example4\Example4-5.cs" />
     <Compile Include="Example4\Example4-6.cs" />
     <Compile Include="Example4\Example4-8.cs" />
@@ -299,6 +300,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Example4-42 - Copy.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Example4-42.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

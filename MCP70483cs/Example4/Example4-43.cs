@@ -12,11 +12,43 @@ namespace MCP70483cs.Example4
     {
         public static void DoProc()
         {
-            using (XmlReader reader =
-                XmlReader.Create(@"Example4-42.xml", new XmlReaderSettings()
+            var instance = new Example4_43();
+            instance.WriteXml();
+            instance.ReadXml();
+        }
+
+        public void WriteXml()
+        {
+            string path = @"Example4-43.xml";
+            if (File.Exists(path)) File.Delete(path);
+            using (XmlWriter writer =
+                XmlWriter.Create(path, new XmlWriterSettings()
                 {
-                    IgnoreWhitespace = true
+                    Indent = true,
+                    NewLineChars = "\r\n", //default 
                 }))
+            {
+                writer.WriteStartDocument();
+                writer.WriteStartElement("people");
+                writer.WriteStartElement("person");
+                writer.WriteAttributeString("firstName", "Ichiro");
+                writer.WriteAttributeString("lastName", "Toyosu");
+                writer.WriteStartElement("contactdetails");
+                writer.WriteElementString("emailaddress", "ichiro@example.com");
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+                writer.Flush();
+            }
+        }
+
+        public void ReadXml()
+        {
+            using (XmlReader reader =
+            XmlReader.Create(@"Example4-42.xml", new XmlReaderSettings()
+            {
+                IgnoreWhitespace = true
+            }))
             {
                 reader.MoveToContent();
 
@@ -33,6 +65,7 @@ namespace MCP70483cs.Example4
                 string emailAddress = reader.ReadString();
                 Console.WriteLine($"Email address: {emailAddress}");
             }
+
         }
     }
 }

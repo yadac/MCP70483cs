@@ -4,13 +4,23 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace MCP70483cs.Example4
 {
     public class Person4
     {
+        [JsonProperty("id")]
         public int Id { get; set; }
+        [JsonProperty("name")]
         public string Name { get; set; }
+        [JsonProperty("age")]
+        public int Age { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format($"Person{Id}: {Name}({Age})");
+        }
     }
 
     public class Example4_37

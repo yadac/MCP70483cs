@@ -49,6 +49,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\MicrosoftOfficeCore.15.0.0\lib\net35\Office.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -221,6 +224,7 @@
     <Compile Include="Example4\Example4-43.cs" />
     <Compile Include="Example4\Example4-45.cs" />
     <Compile Include="Example4\Example4-46.cs" />
+    <Compile Include="Example4\Example4-47.cs" />
     <Compile Include="Example4\Example4-5.cs" />
     <Compile Include="Example4\Example4-6.cs" />
     <Compile Include="Example4\Example4-8.cs" />

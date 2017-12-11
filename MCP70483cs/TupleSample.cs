@@ -8,23 +8,27 @@ namespace MCP70483cs
 {
     class TupleSample
     {
-        public TupleSample()
-        {
 
+        internal static void DoProc()
+        {
+            //// define tuple (2way)
+            //var threeTuple = new Tuple<int, string, Tuple<DateTime>>(10, "morning!", new Tuple<DateTime>(new DateTime()));
+            //var twoTuple = Tuple.Create(20, new Tuple<string>("evening"));
+
+            //// access tuple
+            //int age = threeTuple.Item1;
+            //string greeting = twoTuple.Item2.Item1; // nested
+
+            //// result
+            //Console.WriteLine($"age = {age}, greeting = {greeting}.");
+
+            var (hour, minutes, second) = GetTime();
+            Console.WriteLine($"{hour}:{minutes}:{second}");
         }
 
-        internal void DoProc()
+        private static (int hour, int minutes, int second) GetTime()
         {
-            // define tuple (2way)
-            var threeTuple = new Tuple<int, string, Tuple<DateTime>>(10, "morning!", new Tuple<DateTime>(new DateTime()));
-            var twoTuple = Tuple.Create(20, new Tuple<string>("evening"));
-
-            // access tuple
-            int age = threeTuple.Item1;
-            string greeting = twoTuple.Item2.Item1; // nested
-
-            // result
-            Console.WriteLine($"age = {age}, greeting = {greeting}.");
+            return (10, 20, 30);
         }
     }
 }

@@ -40,6 +40,20 @@ namespace MCP70483cs.Example4
                     Age = 30,
                 },
             };
+
+            // lambda expression (anonymous method)
+            Func<int, int> myDelegate = delegate(int x)
+            {
+                return x * 2;
+            };
+
+            // lambda expression is syntax sugar, for using Func and Action.
+
+            Action<Person4> test = (x) =>
+            {
+                Console.WriteLine(x.ToString());
+            };
+            test(person);
         }
     }
 }

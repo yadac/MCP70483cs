@@ -29,10 +29,9 @@ namespace MCP70483cs.Example4
                 {
                     try
                     {
-                        CreateTableAsBackup(connection,transaction);
                         UpdateEmployee4(connection, transaction);
                         UpdateEmployee5(connection, transaction);
-                        transaction.Commit();
+                        transaction.Rollback();
                     }
                     catch (Exception e)
                     {
@@ -45,27 +44,26 @@ namespace MCP70483cs.Example4
             }
         }
 
-        private static void CreateTableAsBackup(SqlConnection connection, SqlTransaction transaction)
-        {
-            SqlCommand command = new SqlCommand(@"create table dbo.Employees_back from dbo.Employees", connection);
-            command.Transaction = transaction;
-            command.ExecuteNonQuery();
-            Console.WriteLine($"CreateTableAsBackup executed");
-        }
 
         public static int UpdateEmployee4(SqlConnection connection, SqlTransaction transaction)
         {
-            SqlCommand command = new SqlCommand(@"update dbo.Employees set firstName = 'ddd' where Id = 4", connection);
-            command.Transaction = transaction;
-            int affectedRows = command.ExecuteNonQuery();
+            var command = new SqlCommand(@"update dbo.Employees set firstName = 'ddd' where Id = 4")
+            {
+                Connection = connection,
+                Transaction = transaction
+            };
+            var affectedRows = command.ExecuteNonQuery();
             Console.WriteLine($"UpdateEmployee4 executed, affectedRows {affectedRows}");
             return affectedRows;
         }
         public static int UpdateEmployee5(SqlConnection connection, SqlTransaction transaction)
         {
-            SqlCommand command = new SqlCommand(@"update dbo.Employees set firstName = 'eee' where Id = 5", connection);
-            command.Transaction = transaction;
-            int affectedRows = command.ExecuteNonQuery();
+            var command = new SqlCommand(@"update dbo.Employees set firstName = 'eee' where Id = 5")
+            {
+                Connection = connection,
+                Transaction = transaction
+            };
+            var affectedRows = command.ExecuteNonQuery();
             Console.WriteLine($"UpdateEmployee5 executed, affectedRows {affectedRows}");
             return affectedRows;
         }

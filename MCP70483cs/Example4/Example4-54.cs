@@ -23,6 +23,14 @@ namespace MCP70483cs.Example4
             {
                 Console.WriteLine(i);
             }
+            Console.WriteLine("-------------");
+
+            // query
+            var data2 = from d in data  // expect something ienumerable object comes after!
+                        where d > 5
+                        orderby d descending 
+                        select d;
+            Console.WriteLine(string.Join(", ", data2));
         }
     }
 }

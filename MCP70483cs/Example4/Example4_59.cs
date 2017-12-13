@@ -10,6 +10,10 @@ namespace MCP70483cs.Example4
     {
         public static void DoProc()
         {
+            var productA = new Product4() { Description = "aaa", Price = 100 };
+            var productB = new Product4() { Description = "bbb", Price = 200 };
+            var productC = new Product4() { Description = "ccc", Price = 300 };
+
             var orders = new List<Order4>()
             {
                new Order4()
@@ -19,20 +23,12 @@ namespace MCP70483cs.Example4
                        new OrderLine4()
                        {
                            Amount = 10,
-                           Product = new Product4()
-                           {
-                               Description = "aaa",
-                               Price = 100,
-                           }
+                           Product = productA
                        },
                        new OrderLine4()
                        {
                            Amount = 20,
-                           Product = new Product4()
-                           {
-                               Description = "bbb",
-                               Price = 200,
-                           }
+                           Product = productB
                        },
                    },
                },
@@ -43,39 +39,43 @@ namespace MCP70483cs.Example4
                         new OrderLine4()
                         {
                             Amount = 30,
-                            Product = new Product4()
-                            {
-                                Description = "ccc",
-                                Price = 300,
-                            }
+                            Product = productA
                         },
                         new OrderLine4()
                         {
                             Amount = 40,
-                            Product = new Product4()
-                            {
-                                Description = "ddd",
-                                Price = 400,
-                            }
+                            Product = productB
                         },
                         new OrderLine4()
                         {
                             Amount = 50,
-                            Product = new Product4()
-                            {
-                                Description = "eee",
-                                Price = 500,
-                            }
+                            Product = productC
                         },
                     },
                 },
             };
 
-            var averageNumberOfOrderLines = 
+            var averageNumberOfOrderLines =
                 orders.Average(o => o.OrderLine.Count);
 
             // 2 + 3 / 2 = 2.5
             Console.WriteLine(averageNumberOfOrderLines);
+
+            // group by
+            var result = from o in orders
+                         from l in o.OrderLine
+                         group l by l.Product // product is key, summary by same instance
+                into p
+                         select new
+                         {
+                             Product4 = p.Key,
+                             Amount = p.Sum(x => x.Amount),
+                         };
+
+            foreach (var p in result)
+            {
+                Console.WriteLine($"{p.Product4.Description} summary is {p.Amount}.");
+            }
         }
     }
 

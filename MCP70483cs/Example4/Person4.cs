@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 
 namespace MCP70483cs.Example4
 {
+    [Serializable]
     public class Person4
     {
         [JsonProperty("id")]

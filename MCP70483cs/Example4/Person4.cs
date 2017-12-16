@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -17,6 +18,38 @@ namespace MCP70483cs.Example4
         public string Name { get; set; }
         [JsonProperty("age")]
         public int Age { get; set; }
+
+        [NonSerialized] private bool _isDirty;
+
+        public Person4()
+        {
+            _isDirty = false;
+        }
+
+        [OnSerializing()]
+        internal void OnSerializingMethod(StreamingContext context)
+        {
+            Console.WriteLine("OnSerializing");
+        }
+
+        [OnSerialized()]
+        internal void OnSerializedMethod(StreamingContext context)
+        {
+            Console.WriteLine("OnSerialized");
+        }
+
+        [OnDeserializing()]
+        internal void OnDeserializingMethod(StreamingContext context)
+        {
+            Console.WriteLine("OnDeserializing");
+        }
+
+        [OnDeserialized()]
+        internal void OnDeserializedMethod(StreamingContext context)
+        {
+            Console.WriteLine("OnDeserialized");
+        }
+
 
         public override string ToString()
         {

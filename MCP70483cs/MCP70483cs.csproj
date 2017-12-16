@@ -245,11 +245,13 @@
     <Compile Include="Example4\Example4-70.cs" />
     <Compile Include="Example4\Example4-71.cs" />
     <Compile Include="Example4\Example4-73.cs" />
+    <Compile Include="Example4\Example4-78.cs" />
     <Compile Include="Example4\Example4-8.cs" />
     <Compile Include="Example4\Example4-9.cs" />
     <Compile Include="Example4\IntExtensions.cs" />
     <Compile Include="Example4\Person4.cs" />
     <Compile Include="Example4\Example4_59.cs" />
+    <Compile Include="Example4\PersonComplex4.cs" />
     <Compile Include="Example4\TransactionSample1.cs" />
     <Compile Include="Example4\TransactionSample2.cs" />
     <Compile Include="Labo\Labo1.cs" />

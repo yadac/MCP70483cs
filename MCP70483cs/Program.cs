@@ -6,7 +6,7 @@ namespace MCP70483cs
     {
         public static void Main(string[] args)
         {
-            Example4_78.DoProc();
+            Example4_79.DoProc();
         }
     }
 }

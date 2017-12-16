@@ -43,5 +43,10 @@ namespace MCP70483cs.Example4
         public string Name { get; set; }
 
         private bool isDirty = false;
+
+        public override string ToString()
+        {
+            return string.Format($"id = {Id}, Name = {Name}");
+        }
     }
 }

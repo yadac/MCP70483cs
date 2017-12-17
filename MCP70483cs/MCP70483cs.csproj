@@ -260,6 +260,7 @@
     <Compile Include="Example4\PersonComplex4.cs" />
     <Compile Include="Example4\TransactionSample1.cs" />
     <Compile Include="Example4\TransactionSample2.cs" />
+    <Compile Include="Exam\TplSample.cs" />
     <Compile Include="Labo\Labo1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -251,6 +251,7 @@
     <Compile Include="Example4\Example4-80.cs" />
     <Compile Include="Example4\Example4-84.cs" />
     <Compile Include="Example4\Example4-87.cs" />
+    <Compile Include="Example4\Example4-88.cs" />
     <Compile Include="Example4\Example4-9.cs" />
     <Compile Include="Example4\IntExtensions.cs" />
     <Compile Include="Example4\Person4.cs" />

@@ -264,6 +264,7 @@
     <Compile Include="Example4\TransactionSample2.cs" />
     <Compile Include="Exam\LinqOrderBySample.cs" />
     <Compile Include="Exam\SemaphoreSample.cs" />
+    <Compile Include="Exam\ServiceSample.cs" />
     <Compile Include="Exam\TplSample.cs" />
     <Compile Include="Labo\Labo1.cs" />
     <Compile Include="Program.cs" />

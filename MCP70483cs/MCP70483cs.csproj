@@ -105,6 +105,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="DelegateSample2.cs" />
+    <Compile Include="Exam\DocBuilder.cs" />
     <Compile Include="Exam\EHandlerSample.cs" />
     <Compile Include="Example1\Examle1-83.cs" />
     <Compile Include="Example1\Example1-11.cs" />

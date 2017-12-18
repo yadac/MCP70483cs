@@ -37,6 +37,17 @@
   <PropertyGroup>
     <SignManifests>false</SignManifests>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Develop|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Human\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -105,7 +116,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="DelegateSample2.cs" />
+    <Compile Include="Exam\AssemblyLoadSample.cs" />
     <Compile Include="Exam\DocBuilder.cs" />
+    <Compile Include="Exam\DynamicLoader.cs" />
     <Compile Include="Exam\EHandlerSample.cs" />
     <Compile Include="Example1\Examle1-83.cs" />
     <Compile Include="Example1\Example1-11.cs" />
@@ -262,6 +275,8 @@
     <Compile Include="Example4\PersonComplex4.cs" />
     <Compile Include="Example4\TransactionSample1.cs" />
     <Compile Include="Example4\TransactionSample2.cs" />
+    <Compile Include="Exam\ISample.cs" />
+    <Compile Include="Exam\ISampleFactory.cs" />
     <Compile Include="Exam\LinqOrderBySample.cs" />
     <Compile Include="Exam\SemaphoreSample.cs" />
     <Compile Include="Exam\ServiceSample.cs" />

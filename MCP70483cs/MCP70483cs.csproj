@@ -265,6 +265,7 @@
     <Compile Include="Exam\LinqOrderBySample.cs" />
     <Compile Include="Exam\SemaphoreSample.cs" />
     <Compile Include="Exam\ServiceSample.cs" />
+    <Compile Include="Exam\StreamReaderSample.cs" />
     <Compile Include="Exam\TplSample.cs" />
     <Compile Include="Labo\Labo1.cs" />
     <Compile Include="Program.cs" />

@@ -52,9 +52,12 @@ namespace MCP70483cs.Exam
                 BinaryFormatter _formatter = new BinaryFormatter();
                 _formatter.Serialize(fs, instance);
             }
-            
+
             // reverse
+            // *** xxxStream is inherits Stream class
+            // *** Streamxxx is inherits xxx class
             using (FileStream fs = new FileStream(@"c:\temp\test\payment.txt", FileMode.Open))
+            // using (var fs = new StreamReader(@"c:\temp\test\payment.txt"))
             {
                 BinaryFormatter _formatter = new BinaryFormatter();
                 var reversedInstance = (ISample)_formatter.Deserialize(fs);
@@ -62,8 +65,6 @@ namespace MCP70483cs.Exam
             }
 
         }
-
-
 
     }
 }

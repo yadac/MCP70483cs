@@ -280,6 +280,7 @@
     <Compile Include="Exam\LinqOrderBySample.cs" />
     <Compile Include="Exam\MonitorControl.cs" />
     <Compile Include="Exam\SemaphoreSample.cs" />
+    <Compile Include="Exam\SerializedPayment.cs" />
     <Compile Include="Exam\ServiceSample.cs" />
     <Compile Include="Exam\StreamReaderSample.cs" />
     <Compile Include="Exam\TplSample.cs" />

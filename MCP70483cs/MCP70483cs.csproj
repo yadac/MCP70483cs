@@ -278,6 +278,7 @@
     <Compile Include="Exam\ISample.cs" />
     <Compile Include="Exam\ISampleFactory.cs" />
     <Compile Include="Exam\LinqOrderBySample.cs" />
+    <Compile Include="Exam\MonitorControl.cs" />
     <Compile Include="Exam\SemaphoreSample.cs" />
     <Compile Include="Exam\ServiceSample.cs" />
     <Compile Include="Exam\StreamReaderSample.cs" />

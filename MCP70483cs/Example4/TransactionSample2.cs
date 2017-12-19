@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -37,7 +38,7 @@ namespace MCP70483cs.Example4
                     {
                         UpdateEmployee4(connection, transaction);
                         UpdateEmployee5(connection, transaction);
-                        transaction.Rollback();
+                        transaction.Commit();
                     }
                     catch (Exception e)
                     {
@@ -51,9 +52,10 @@ namespace MCP70483cs.Example4
         }
 
 
-        public int UpdateEmployee4(SqlConnection connection, SqlTransaction transaction)
+        private int UpdateEmployee4(SqlConnection connection, SqlTransaction transaction)
         {
-            using (var command = new SqlCommand(@"update dbo.Employees set firstName = 'ddd' where Id = 4", connection, transaction))
+            // using (var command = new SqlCommand(@"update dbo.Employees set firstName = 'ddd' where Id = 4", connection, transaction))
+            using (var command = new SqlCommand(GetCommand(@"c:\temp\sql\UpdateEmployee4.sql"), connection, transaction))
             {
                 var affectedRows = command.ExecuteNonQuery();
                 Console.WriteLine($"UpdateEmployee4 executed, affectedRows {affectedRows}");
@@ -61,13 +63,22 @@ namespace MCP70483cs.Example4
             }
         }
 
-        public static int UpdateEmployee5(SqlConnection connection, SqlTransaction transaction)
+        private int UpdateEmployee5(SqlConnection connection, SqlTransaction transaction)
         {
-            using (var command = new SqlCommand(@"update dbo.Employees set firstName = 'eee' where Id = 5", connection, transaction))
+            // using (var command = new SqlCommand(@"update dbo.Employees set firstName = 'eee' where Id = 5", connection, transaction))
+            using (var command = new SqlCommand(GetCommand(@"c:\temp\sql\UpdateEmployee5.sql"), connection, transaction))
             {
                 var affectedRows = command.ExecuteNonQuery();
                 Console.WriteLine($"UpdateEmployee5 executed, affectedRows {affectedRows}");
                 return affectedRows;
+            }
+        }
+
+        private string GetCommand(string path)
+        {
+            using (var reader = new StreamReader(path))
+            {
+                return reader.ReadToEnd();
             }
         }
 

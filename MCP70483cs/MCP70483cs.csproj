@@ -282,6 +282,7 @@
     <Compile Include="Exam\ServiceSample.cs" />
     <Compile Include="Exam\StreamReaderSample.cs" />
     <Compile Include="Exam\TplSample.cs" />
+    <Compile Include="Exam\Weapons.cs" />
     <Compile Include="Labo\Labo1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

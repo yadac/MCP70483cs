@@ -18,10 +18,24 @@ namespace MCP70483cs.Example4.Tests
             var instance = new TransactionSample2();
 
             // Act
+            instance.DoWork();
 
             // Assert
-            Assert.AreEqual(1, 1);
-            // Assert.Fail();
+            Assert.AreEqual(true, true);
+        }
+
+        [TestMethod()]
+        public void UpdateWithBeginTransactionTests()
+        {
+            // Arrange
+            var instance = new TransactionSample2();
+            var pbObj = new PrivateObject(instance);
+
+            // Act
+            pbObj.Invoke("UpdateWithBeginTransaction");
+
+            // Assert
+            Assert.AreEqual(true, true);
         }
     }
 }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCP70483wpf", "MCP70483wpf\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Human", "Human\Human.csproj", "{6EA9BF8B-D05B-48C8-BBFF-A8768FEE4EC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCP70483csTests", "MCP70483csTests\MCP70483csTests.csproj", "{5854A19C-BCB0-4447-AA9E-2CF9936D5EC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,12 @@ Global
 		{6EA9BF8B-D05B-48C8-BBFF-A8768FEE4EC9}.Develop|Any CPU.Build.0 = Develop|Any CPU
 		{6EA9BF8B-D05B-48C8-BBFF-A8768FEE4EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EA9BF8B-D05B-48C8-BBFF-A8768FEE4EC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5854A19C-BCB0-4447-AA9E-2CF9936D5EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5854A19C-BCB0-4447-AA9E-2CF9936D5EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5854A19C-BCB0-4447-AA9E-2CF9936D5EC5}.Develop|Any CPU.ActiveCfg = Debug|Any CPU
+		{5854A19C-BCB0-4447-AA9E-2CF9936D5EC5}.Develop|Any CPU.Build.0 = Debug|Any CPU
+		{5854A19C-BCB0-4447-AA9E-2CF9936D5EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5854A19C-BCB0-4447-AA9E-2CF9936D5EC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

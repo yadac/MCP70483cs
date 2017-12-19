@@ -10,22 +10,28 @@ using System.Transactions;
 
 namespace MCP70483cs.Example4
 {
-    class TransactionSample2
+    public class TransactionSample2
     {
         public static void DoProc()
+        {
+            var ins = new TransactionSample2();
+            ins.DoWork();
+        }
+
+        public void DoWork()
         {
             UpdateWithBeginTransaction();
         }
 
-        private static void UpdateWithBeginTransaction()
+        private void UpdateWithBeginTransaction()
         {
             string cs = ConfigurationManager.ConnectionStrings["localdbsample"].ConnectionString;
-            using (SqlConnection connection = new SqlConnection(cs))
+            using (var connection = new SqlConnection(cs))
             {
                 connection.Open();
 
                 // if connection have not opened, invalid exception raise.
-                using (SqlTransaction transaction = connection.BeginTransaction("SampleTransaction"))
+                using (var transaction = connection.BeginTransaction("SampleTransaction"))
                 {
                     try
                     {
@@ -45,27 +51,24 @@ namespace MCP70483cs.Example4
         }
 
 
-        public static int UpdateEmployee4(SqlConnection connection, SqlTransaction transaction)
+        public int UpdateEmployee4(SqlConnection connection, SqlTransaction transaction)
         {
-            var command = new SqlCommand(@"update dbo.Employees set firstName = 'ddd' where Id = 4")
+            using (var command = new SqlCommand(@"update dbo.Employees set firstName = 'ddd' where Id = 4", connection, transaction))
             {
-                Connection = connection,
-                Transaction = transaction
-            };
-            var affectedRows = command.ExecuteNonQuery();
-            Console.WriteLine($"UpdateEmployee4 executed, affectedRows {affectedRows}");
-            return affectedRows;
+                var affectedRows = command.ExecuteNonQuery();
+                Console.WriteLine($"UpdateEmployee4 executed, affectedRows {affectedRows}");
+                return affectedRows;
+            }
         }
+
         public static int UpdateEmployee5(SqlConnection connection, SqlTransaction transaction)
         {
-            var command = new SqlCommand(@"update dbo.Employees set firstName = 'eee' where Id = 5")
+            using (var command = new SqlCommand(@"update dbo.Employees set firstName = 'eee' where Id = 5", connection, transaction))
             {
-                Connection = connection,
-                Transaction = transaction
-            };
-            var affectedRows = command.ExecuteNonQuery();
-            Console.WriteLine($"UpdateEmployee5 executed, affectedRows {affectedRows}");
-            return affectedRows;
+                var affectedRows = command.ExecuteNonQuery();
+                Console.WriteLine($"UpdateEmployee5 executed, affectedRows {affectedRows}");
+                return affectedRows;
+            }
         }
 
     }

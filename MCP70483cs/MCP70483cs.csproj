@@ -281,6 +281,7 @@
     <Compile Include="Exam\LinqOrderBySample.cs" />
     <Compile Include="Exam\MonitorControl.cs" />
     <Compile Include="Exam\OriginalSubstr.cs" />
+    <Compile Include="Exam\QuerySample.cs" />
     <Compile Include="Exam\SemaphoreSample.cs" />
     <Compile Include="Exam\SerializedPayment.cs" />
     <Compile Include="Exam\ServiceSample.cs" />

@@ -117,6 +117,7 @@
     </Compile>
     <Compile Include="DelegateSample2.cs" />
     <Compile Include="Exam\AssemblyLoadSample.cs" />
+    <Compile Include="Exam\DebuggerOptions.cs" />
     <Compile Include="Exam\DocBuilder.cs" />
     <Compile Include="Exam\DynamicLoader.cs" />
     <Compile Include="Exam\EHandlerSample.cs" />

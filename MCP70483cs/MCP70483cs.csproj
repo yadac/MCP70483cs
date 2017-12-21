@@ -288,6 +288,7 @@
     <Compile Include="Exam\MainWindow.cs" />
     <Compile Include="Exam\MonitorControl.cs" />
     <Compile Include="Exam\OriginalSubstr.cs" />
+    <Compile Include="Exam\ExamProduct.cs" />
     <Compile Include="Exam\QuerySample.cs" />
     <Compile Include="Exam\SemaphoreSample.cs" />
     <Compile Include="Exam\SerializedPayment.cs" />

@@ -23,6 +23,9 @@ namespace MCP70483cs.Example4
 
         public Person4()
         {
+            Id = 0;
+            Name = "zero";
+            Age = 100;
             _isDirty = false;
         }
 

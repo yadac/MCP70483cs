@@ -279,6 +279,7 @@
     <Compile Include="Exam\ErrorEventHandler.cs" />
     <Compile Include="Exam\ISample.cs" />
     <Compile Include="Exam\ISampleFactory.cs" />
+    <Compile Include="Exam\LinkedListSample.cs" />
     <Compile Include="Exam\LinqOrderBySample.cs" />
     <Compile Include="Exam\MonitorControl.cs" />
     <Compile Include="Exam\OriginalSubstr.cs" />

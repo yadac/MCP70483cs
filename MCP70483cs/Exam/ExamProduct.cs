@@ -1,55 +1,45 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MCP70483cs.Exam
 {
-    class ExamProduct : INotifyPropertyChanging
+    internal class ExamProduct : INotifyPropertyChanging
     {
         private double _listPrice;
 
+        public ExamProduct()
+        {
+            // allcates process to event
+            PropertyChanging += (sender, args) => { Console.WriteLine($"{args.PropertyName} is changed!!"); };
+        }
+
         public double ListPrice
         {
-            get { return this._listPrice; }
+            get => _listPrice;
             set
             {
-                if (value != this._listPrice)
+                if (value != _listPrice)
                 {
-                    this.OnListPropertyChanging(value);
-                    this.OnPropertyChanging("ListPrice");
-                    this._listPrice = value;
+                    OnListPropertyChanging(value);
+                    OnPropertyChanging("ListPrice");
+                    _listPrice = value;
                 }
             }
         }
+
+        public event PropertyChangingEventHandler PropertyChanging;
 
         private void OnListPropertyChanging(double value)
         {
             Console.WriteLine("OnListPropertyChanging called");
         }
 
-        public ExamProduct()
-        {
-            // allcates process to event
-            PropertyChanging += (sender, args) =>
-            {
-                Console.WriteLine($"{args.PropertyName} is changed!!");
-            };
-        }
-
-        public event PropertyChangingEventHandler PropertyChanging;
-
         protected virtual void OnPropertyChanging(string propertyName)
         {
-            var ev = this.PropertyChanging;
+            var ev = PropertyChanging;
             if (ev != null)
-            {
                 ev(this, new PropertyChangingEventArgs(propertyName));
-            }
         }
-
     }
 
     public class ExamProductWork

@@ -283,6 +283,7 @@
     <Compile Include="Exam\IntegerWriter.cs" />
     <Compile Include="Exam\ISample.cs" />
     <Compile Include="Exam\ISampleFactory.cs" />
+    <Compile Include="Exam\LabelSample.cs" />
     <Compile Include="Exam\LinkedListSample.cs" />
     <Compile Include="Exam\LinqOrderBySample.cs" />
     <Compile Include="Exam\MainWindow.cs" />

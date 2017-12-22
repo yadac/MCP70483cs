@@ -296,6 +296,7 @@
     <Compile Include="Exam\ServiceSample.cs" />
     <Compile Include="Exam\SortSample.cs" />
     <Compile Include="Exam\StreamReaderSample.cs" />
+    <Compile Include="Exam\TcpListenerSample.cs" />
     <Compile Include="Exam\TplSample.cs" />
     <Compile Include="Exam\ValueRangeAttribute.cs" />
     <Compile Include="Exam\Weapons.cs" />

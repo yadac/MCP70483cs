@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace MCP70483cs.Exam
@@ -21,8 +23,23 @@ namespace MCP70483cs.Exam
 
             // lazy, if you ToList(), result2 set value immediately
             var result2 = from b in Book.GetBooks() select b.ISBN;
+
+            Stream[] streams = new Stream[]{};
+            foreach (var s in streams)
+            {
+                ThreadPool.QueueUserWorkItem(
+                    // callback state is object 
+                    state => TransformStream((Stream)state), 
+                    // state
+                    s
+                    );
+            }
         }
 
+        private static void TransformStream(Stream stream)
+        {
+            // throw new NotImplementedException();
+        }
     }
 
     public class Publisher

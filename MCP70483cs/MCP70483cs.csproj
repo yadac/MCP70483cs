@@ -117,6 +117,7 @@
     </Compile>
     <Compile Include="DelegateSample2.cs" />
     <Compile Include="Exam\AssemblyLoadSample.cs" />
+    <Compile Include="Exam\AsyncReaderSample.cs" />
     <Compile Include="Exam\CustomSerializer.cs" />
     <Compile Include="Exam\DebuggerOptions.cs" />
     <Compile Include="Exam\DisposableResourceHolder.cs" />

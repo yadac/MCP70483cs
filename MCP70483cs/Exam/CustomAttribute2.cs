@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Permissions;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,5 +28,36 @@ namespace MCP70483cs.Exam
 
         [CustomAttribute2("saburo")]
         private string Name2;
+
+        private IEnumerable<SampleBook> GetBooks()
+        {
+            return new List<SampleBook>();
+        }
+
+        public void DoProc()
+        {
+            var query = from l in GetBooks()
+                        select new MailingAddress
+                        {
+                            Name = l.Name ?? "our neighbors",
+                            Address = "japan"
+                        };
+
+            AppDomain.CurrentDomain.SetPrincipalPolicy(PrincipalPolicy.WindowsPrincipal);
+            //PrincipalPermission p = new PrincipalPermission(null, "builtin\\users");
+            //p.Demand();
+
+
+            mousemove += (s, e) => { Console.WriteLine(e.ToString()); };
+        }
+
+        public event EventHandler<EventArgs> mousemove;
+
+    }
+
+    internal class MailingAddress
+    {
+        public string Name { get; set; }
+        public string Address { get; set; }
     }
 }

@@ -301,6 +301,7 @@
     <Compile Include="Exam\TcpListenerSample.cs" />
     <Compile Include="Exam\TplSample.cs" />
     <Compile Include="Exam\ValueRangeAttribute.cs" />
+    <Compile Include="Exam\VariousEmployeeCreater.cs" />
     <Compile Include="Exam\Weapons.cs" />
     <Compile Include="Labo\Labo1.cs" />
     <Compile Include="Program.cs" />

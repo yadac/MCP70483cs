@@ -9,7 +9,7 @@ namespace MCP70483cs
     {
         public static void Main(string[] args)
         {
-            AsyncReaderSample.DoProc();
+            VariousEmployeeCreater.DoProc();
         }
     }
 }

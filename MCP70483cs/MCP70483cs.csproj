@@ -289,6 +289,7 @@
     <Compile Include="Exam\LinqOrderBySample.cs" />
     <Compile Include="Exam\MainWindow.cs" />
     <Compile Include="Exam\MonitorControl.cs" />
+    <Compile Include="Exam\NamedAndPositionalParameterSample.cs" />
     <Compile Include="Exam\OriginalSubstr.cs" />
     <Compile Include="Exam\ExamProduct.cs" />
     <Compile Include="Exam\ParalleProcessing.cs" />
@@ -303,6 +304,7 @@
     <Compile Include="Exam\ValueRangeAttribute.cs" />
     <Compile Include="Exam\VariousEmployeeCreater.cs" />
     <Compile Include="Exam\Weapons.cs" />
+    <Compile Include="Exam\WriteDataSample.cs" />
     <Compile Include="Labo\Labo1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Annotations.cs" />

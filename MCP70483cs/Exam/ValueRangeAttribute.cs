@@ -45,6 +45,7 @@ namespace MCP70483cs.Exam
         public int Order { get; set; }
         public int FixedLength { get; set; }
         public char PadChar { get; set; }
+
     }
 
     public class EmployeeEntity : FixedDataEntityBase, ISample

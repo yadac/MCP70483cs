@@ -118,6 +118,7 @@
     <Compile Include="DelegateSample2.cs" />
     <Compile Include="Exam\AssemblyLoadSample.cs" />
     <Compile Include="Exam\AsyncReaderSample.cs" />
+    <Compile Include="Exam\CustomAttribute2.cs" />
     <Compile Include="Exam\CustomSerializer.cs" />
     <Compile Include="Exam\DebuggerOptions.cs" />
     <Compile Include="Exam\DisposableResourceHolder.cs" />
@@ -304,6 +305,7 @@
     <Compile Include="Exam\ValueRangeAttribute.cs" />
     <Compile Include="Exam\VariousEmployeeCreater.cs" />
     <Compile Include="Exam\Weapons.cs" />
+    <Compile Include="Exam\WorkItemSample.cs" />
     <Compile Include="Exam\WriteDataSample.cs" />
     <Compile Include="Labo\Labo1.cs" />
     <Compile Include="Program.cs" />

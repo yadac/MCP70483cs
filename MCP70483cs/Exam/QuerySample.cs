@@ -18,6 +18,9 @@ namespace MCP70483cs.Exam
             {
                 Console.WriteLine($"isbn = {item.ISBN}, title = {item.Title}, publisher = {item.Name}");
             }
+
+            // lazy, if you ToList(), result2 set value immediately
+            var result2 = from b in Book.GetBooks() select b.ISBN;
         }
 
     }

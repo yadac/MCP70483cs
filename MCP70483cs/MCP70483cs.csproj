@@ -118,6 +118,7 @@
     <Compile Include="DelegateSample2.cs" />
     <Compile Include="Exam\AssemblyLoadSample.cs" />
     <Compile Include="Exam\AsyncReaderSample.cs" />
+    <Compile Include="Exam\Cancellation.cs" />
     <Compile Include="Exam\CustomAttribute2.cs" />
     <Compile Include="Exam\CustomSerializer.cs" />
     <Compile Include="Exam\DaysOfWeekWork.cs" />

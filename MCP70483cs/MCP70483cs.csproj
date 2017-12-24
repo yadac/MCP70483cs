@@ -283,6 +283,7 @@
     <Compile Include="Exam\ErrorEventHandler.cs" />
     <Compile Include="Exam\GenericBuilder.cs" />
     <Compile Include="Exam\IntegerWriter.cs" />
+    <Compile Include="Exam\IntrusiveListExtensions.cs" />
     <Compile Include="Exam\ISample.cs" />
     <Compile Include="Exam\ISampleFactory.cs" />
     <Compile Include="Exam\LabelSample.cs" />

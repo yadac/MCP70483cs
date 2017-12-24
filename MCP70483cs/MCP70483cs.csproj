@@ -120,6 +120,7 @@
     <Compile Include="Exam\AsyncReaderSample.cs" />
     <Compile Include="Exam\CustomAttribute2.cs" />
     <Compile Include="Exam\CustomSerializer.cs" />
+    <Compile Include="Exam\DaysOfWeekWork.cs" />
     <Compile Include="Exam\DebuggerOptions.cs" />
     <Compile Include="Exam\DisposableResourceHolder.cs" />
     <Compile Include="Exam\DocBuilder.cs" />

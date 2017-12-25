@@ -298,7 +298,9 @@
     <Compile Include="Exam\ExamProduct.cs" />
     <Compile Include="Exam\ParalleProcessing.cs" />
     <Compile Include="Exam\PhoneNumberSample.cs" />
+    <Compile Include="Exam\ProductExam.cs" />
     <Compile Include="Exam\QuerySample.cs" />
+    <Compile Include="Exam\RootCustomer.cs" />
     <Compile Include="Exam\SemaphoreSample.cs" />
     <Compile Include="Exam\SerializedPayment.cs" />
     <Compile Include="Exam\ServiceSample.cs" />

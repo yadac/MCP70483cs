@@ -25,6 +25,7 @@ namespace MCP70483cs.Exam
 
         public override IEnumerable<RootCustomer> GetCustomer()
         {
+            throw new NotImplementedException();
         }
     }
 

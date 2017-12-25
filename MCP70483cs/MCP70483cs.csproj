@@ -310,6 +310,7 @@
     <Compile Include="Exam\StreamReaderSample.cs" />
     <Compile Include="Exam\TaskSample.cs" />
     <Compile Include="Exam\TcpListenerSample.cs" />
+    <Compile Include="Exam\ThreadLocalSample.cs" />
     <Compile Include="Exam\TplSample.cs" />
     <Compile Include="Exam\ValueRangeAttribute.cs" />
     <Compile Include="Exam\VariousEmployeeCreater.cs" />

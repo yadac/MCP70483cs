@@ -15,6 +15,8 @@ namespace MCP70483cs.Exam
         {
             threadLocal.Value = 123;
 
+            // 異なるスレッドからアクセスするためにstatic, しかし値は各スレッド内に格納する
+            // 同じ処理を実装するため？
             // thread have own value.
             // 1
             // -1

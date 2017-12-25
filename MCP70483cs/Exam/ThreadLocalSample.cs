@@ -9,7 +9,7 @@ namespace MCP70483cs.Exam
 {
     class ThreadLocalSample
     {
-        static ThreadLocal<int> threadLocal = new ThreadLocal<int>();
+        private static ThreadLocal<int> threadLocal = new ThreadLocal<int>();
 
         public static void DoProc()
         {
@@ -25,6 +25,15 @@ namespace MCP70483cs.Exam
                 Task.Run(() => { Console.WriteLine(++threadLocal.Value); }),
                 Task.Run(() => { Console.WriteLine(--threadLocal.Value); })).Wait();
             Console.WriteLine(threadLocal.Value);
+        }
+    }
+
+    class ThreadLocalSample2
+    {
+        public static void DoProc()
+        {
+            // if public, not error
+            // ThreadLocalSample.threadLocal
         }
     }
 }

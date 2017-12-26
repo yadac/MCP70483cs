@@ -301,6 +301,7 @@
     <Compile Include="Exam\LoggerSample.cs" />
     <Compile Include="Exam\MainWindow.cs" />
     <Compile Include="Exam\MonitorControl.cs" />
+    <Compile Include="Exam\MouseMove.cs" />
     <Compile Include="Exam\NamedAndPositionalParameterSample.cs" />
     <Compile Include="Exam\OriginalSubstr.cs" />
     <Compile Include="Exam\ExamProduct.cs" />

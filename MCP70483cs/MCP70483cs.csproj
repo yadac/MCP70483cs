@@ -296,6 +296,7 @@
     <Compile Include="Exam\LabelSample.cs" />
     <Compile Include="Exam\LinkedListSample.cs" />
     <Compile Include="Exam\LinqOrderBySample.cs" />
+    <Compile Include="Exam\ListObjects.cs" />
     <Compile Include="Exam\LoggerSample.cs" />
     <Compile Include="Exam\MainWindow.cs" />
     <Compile Include="Exam\MonitorControl.cs" />

@@ -121,6 +121,7 @@
     <Compile Include="Exam\AssemblyLoadSample.cs" />
     <Compile Include="Exam\AsyncReaderSample.cs" />
     <Compile Include="Exam\Cancellation.cs" />
+    <Compile Include="Exam\Categories.cs" />
     <Compile Include="Exam\CheckedSample.cs" />
     <Compile Include="Exam\CustomAttribute2.cs" />
     <Compile Include="Exam\CustomSerializer.cs" />

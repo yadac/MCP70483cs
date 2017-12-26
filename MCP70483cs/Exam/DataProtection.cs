@@ -26,6 +26,9 @@ namespace MCP70483cs.Exam
 
         public static byte[] Protect(byte[] data)
         {
+            // protectedMemory don't have return value. encrypts meomrystream directly.
+            // 保護されたデータは、現在のユーザーに関連付けられます。
+            // 現在のユーザー コンテキストで実行されているスレッドのみのデータ保護を解除できます。
             return ProtectedData.Protect(data, s_additionalEntropy, DataProtectionScope.CurrentUser);
         }
 

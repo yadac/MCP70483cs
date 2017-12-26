@@ -57,6 +57,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Example4\TransactionSample2Tests.cs" />
+    <Compile Include="ProgramTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

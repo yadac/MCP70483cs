@@ -85,6 +85,7 @@
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -123,6 +124,7 @@
     <Compile Include="Exam\CheckedSample.cs" />
     <Compile Include="Exam\CustomAttribute2.cs" />
     <Compile Include="Exam\CustomSerializer.cs" />
+    <Compile Include="Exam\DataProtection.cs" />
     <Compile Include="Exam\DaysOfWeekWork.cs" />
     <Compile Include="Exam\DebugAssertion.cs" />
     <Compile Include="Exam\DebuggerOptions.cs" />

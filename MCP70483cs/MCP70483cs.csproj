@@ -318,6 +318,7 @@
     <Compile Include="Exam\SortSample.cs" />
     <Compile Include="Exam\StreamReaderSample.cs" />
     <Compile Include="Exam\StructSample.cs" />
+    <Compile Include="Exam\SurrogateCafe.cs" />
     <Compile Include="Exam\TaskSample.cs" />
     <Compile Include="Exam\TcpListenerSample.cs" />
     <Compile Include="Exam\ThreadLocalSample.cs" />

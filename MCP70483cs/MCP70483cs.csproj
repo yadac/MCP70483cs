@@ -325,6 +325,7 @@
     <Compile Include="Exam\VariousEmployeeCreater.cs" />
     <Compile Include="Exam\WaitHandleSample.cs" />
     <Compile Include="Exam\Weapons.cs" />
+    <Compile Include="Exam\WorkItem.cs" />
     <Compile Include="Exam\WorkItemSample.cs" />
     <Compile Include="Exam\WriteDataSample.cs" />
     <Compile Include="Labo\Labo1.cs" />

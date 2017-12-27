@@ -23,6 +23,7 @@ namespace MCP70483cs.Exam
 
             // lazy, if you ToList(), result2 set value immediately
             var result2 = from b in Book.GetBooks() select b.ISBN;
+            var result3 = Book.GetBooks().Select(b => new { b.Title, b.ISBN });
 
             Stream[] streams = new Stream[]{};
             foreach (var s in streams)

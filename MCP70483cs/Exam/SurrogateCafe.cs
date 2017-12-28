@@ -2,6 +2,7 @@
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.Entity.Core.Common.CommandTrees;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -104,8 +105,13 @@ namespace MCP70483cs.Exam
             
             StreamReader reader = new StreamReader(stream);
             Console.WriteLine(reader.ReadToEnd());
+
+
+            object s = "hello";
+            int a = (int)(float)s;
+
             
-            
+
         }
     }
 }
